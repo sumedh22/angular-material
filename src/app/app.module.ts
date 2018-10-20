@@ -10,15 +10,17 @@ import { MaterialModule } from '../material-component';
 import { RouterModule, Routes } from '@angular/router';
 import { TableComponent } from './components/table/table.component';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
+import { GiveFeedbackComponent } from './pages/give-feedback/give-feedback.component';
 const appRoutes: Routes = [
-  { path: '', component: FormComponentComponent },
-  {path:'table', component: TableComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     FormComponentComponent,
-    TableComponent
+    TableComponent,
+    HomeComponent,
+    GiveFeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -26,10 +28,6 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
     HttpClientModule
   ],
   providers: [HttpClient],

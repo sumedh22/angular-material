@@ -1,18 +1,19 @@
-<mat-toolbar style="max-width: 1200px; margin-left: auto;margin-right: auto;width: 100%; box-sizing:border-box;" color="primary"
-  class="example-toolbar">
-  <button mat-icon-button (click)="snav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <h1 class="example-app-name">Responsive App</h1>
+<mat-toolbar color="primary" class="example-toolbar">
+  <div class="mat-toolbar-single-row" style="max-width: 1200px; margin-left: auto;margin-right: auto;width: 100%; box-sizing:border-box;">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Feedback App</h1>
+  </div>
 </mat-toolbar>
 
-<mat-sidenav-container style="max-width: 1200px; margin-left: auto;margin-right: auto;width: 100%; box-sizing:border-box;height: 100vh;"
+<mat-sidenav-container style="max-width: 1200px; margin-left: auto;margin-right: auto;width: 100%; box-sizing:border-box;"
   class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
   <mat-sidenav (click)="snav.toggle()" class="app-container-width" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
     fixedTopGap="56">
     <mat-nav-list>
-      <a routerLinkActive="active-link" style="font-family: 'Pacifico', cursive;color: #3f51b5" mat-list-item routerLink="/">Material Form</a>
-      <a routerLinkActive="active-link" style="font-family: 'Pacifico', cursive;color: #3f51b5" mat-list-item routerLink="/table">tables</a>
+      <a routerLinkActive="active-link" style="font-family: 'Pacifico', cursive;color: #3f51b5" mat-list-item routerLink="/">Home</a>
+      <a routerLinkActive="active-link" style="font-family: 'Pacifico', cursive;color: #3f51b5" mat-list-item routerLink="/give">Give Feedback</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
